@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @keyframes loading {
+      50% {
+        height: 1.5rem;
+      }
+    }
+    :root {
+      overflow: hidden;
+    }
+    * {padding: 0; margin: 0}
+
+    div#loading {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      width: 100vw;
+      height: 100vh;
+      z-index: 10;
+    }
+
+    div#loading div {
+      margin: 0.5rem;
+      width: 1rem;
+      height: 1rem;
+      display: inline-block;
+      border-radius: 50px;
+      animation: loading 1s ease infinite forwards;
+    }
+
+    div#loading div:nth-child(1) {
+      animation-delay: 0.1s;
+      background-color: red;
+    }
+
+    div#loading div:nth-child(2) {
+      animation-delay: 0.2s;
+      background-color: orange;
+    }
+
+    div#loading div:nth-child(3) {
+      animation-delay: 0.3s;
+      background-color: lime;
+    }
+
+    div#loading div:nth-child(4) {
+      animation-delay: 0.4s;
+      background-color: rgb(0, 128, 92);
+    }
+
+    div#loading div:nth-child(5) {
+      animation-delay: 0.5s;
+      background-color: blue;
+    }
+
+    #imgs {
+      width: 100%;
+      position: absolute;
+      top: 50%; left: 50%;
+      translate: -50% -50%;
+      border: 1px solid black;
+      display: flex;
+      height: 500px;
+      overflow-x: auto;
+      gap: 1rem
+    }
+  </style>
+</head>
+<body>
+  <div id="loading">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div id="imgs">
+    <img src="https://source.unsplash.com/random/&1" alt="">
+    <img src="https://source.unsplash.com/random/&2" alt="">
+    <img src="https://source.unsplash.com/random/&3" alt="">
+    <img src="https://source.unsplash.com/random/&4" alt="">
+    <img src="https://source.unsplash.com/random/&5" alt="">
+    <img src="https://source.unsplash.com/random/&6" alt="">
+    <img src="https://source.unsplash.com/random/&7" alt="">
+    <img src="https://source.unsplash.com/random/&8" alt="">
+    <img src="https://source.unsplash.com/random/&9" alt="">
+    <img src="https://source.unsplash.com/random/&10" alt="">
+    <img src="https://source.unsplash.com/random/&11" alt="">
+    <img src="https://source.unsplash.com/random/&12" alt="">
+    <img src="https://source.unsplash.com/random/&13" alt="">
+    <img src="https://source.unsplash.com/random/&14" alt="">
+    <img src="https://source.unsplash.com/random/&15" alt="">
+    <img src="https://source.unsplash.com/random/&16" alt="">
+    <img src="https://source.unsplash.com/random/&17" alt="">
+    <img src="https://source.unsplash.com/random/&18" alt="">
+    <img src="https://source.unsplash.com/random/&19" alt="">
+    <img src="https://source.unsplash.com/random/&20" alt="">
+    <img src="https://source.unsplash.com/random/&21" alt="">
+    <img src="https://source.unsplash.com/random/&22" alt="">
+    <img src="https://source.unsplash.com/random/&23" alt="">
+    <img src="https://source.unsplash.com/random/&24" alt="">
+    <img src="https://source.unsplash.com/random/&25" alt="">
+    <img src="https://source.unsplash.com/random/&26" alt="">
+    <img src="https://source.unsplash.com/random/&27" alt="">
+    <img src="https://source.unsplash.com/random/&28" alt="">
+    <img src="https://source.unsplash.com/random/&29" alt="">
+    <img src="https://source.unsplash.com/random/&30" alt="">
+    <img src="https://source.unsplash.com/random/&31" alt="">
+    <img src="https://source.unsplash.com/random/&32" alt="">
+    <img src="https://source.unsplash.com/random/&33" alt="">
+    <img src="https://source.unsplash.com/random/&34" alt="">
+    <img src="https://source.unsplash.com/random/&35" alt="">
+    <img src="https://source.unsplash.com/random/&36" alt="">
+    <img src="https://source.unsplash.com/random/&37" alt="">
+    <img src="https://source.unsplash.com/random/&38" alt="">
+    <img src="https://source.unsplash.com/random/&39" alt="">
+    <img src="https://source.unsplash.com/random/&40" alt="">
+    <img src="https://source.unsplash.com/random/&41" alt="">
+    <img src="https://source.unsplash.com/random/&42" alt="">
+    <img src="https://source.unsplash.com/random/&43" alt="">
+    <img src="https://source.unsplash.com/random/&44" alt="">
+    <img src="https://source.unsplash.com/random/&45" alt="">
+    <img src="https://source.unsplash.com/random/&46" alt="">
+    <img src="https://source.unsplash.com/random/&47" alt="">
+    <img src="https://source.unsplash.com/random/&48" alt="">
+    <img src="https://source.unsplash.com/random/&49" alt="">
+    <img src="https://source.unsplash.com/random/&50" alt="">
+  </div>
+</body>
+</html>
+
+<script>
+  addEventListener('load', ev => {
+    const e = document.getElementById('loading')
+    e.parentNode.removeChild(e)
+    console.log('loaded!')
+  })
+</script>
