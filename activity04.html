@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>Speed: 59</p>
+</body>
+</html>
+
+<script>
+  const p = document.querySelector('p')
+  console.log(p)
+  document.addEventListener('keydown', ev => {
+    if (ev.key == 'ArrowUp' || ev.key == 'k')
+      addToSpeed(1)
+    else if (ev.key == 'ArrowDown' || ev.key == 'j')
+      addToSpeed(-1)
+  })
+
+  function addToSpeed(x) {
+    let speed = +p.textContent.match(/[0-9]+/)[0]
+    if (speed+x < 0 || speed+x > 120) return
+
+    speed += x
+    p.textContent = p.textContent.replace(/[0-9]+/, speed)
+  }
+</script>
