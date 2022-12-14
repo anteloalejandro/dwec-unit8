@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      height: 100vh;
+      width: 100vw;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      background-image: radial-gradient(circle at center, white, grey);
+    }
+
+    body>div {
+      height: 100px;
+      width: 200px;
+      border: 1px solid black;
+      display: grid;
+      place-items: center;
+      border-radius: 20px;
+    }
+
+    body>div[draggable='true'] {
+      background-color: hsl(60, 100%, 70%);
+    }
+    body>:not(div[draggable='true']) {
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <div draggable="true">
+    <p>I am draggable</p>
+  </div>
+  <div>
+    <p>I am the end point</p>
+  </div>
+</body>
+</html>
+
+<script>
+  const draggable = document.querySelector('body>div[draggable="true"]')
+  const endPoint = document.querySelector('body>:not(div[draggable="true"])')
+
+  draggable.addEventListener('dragstart', ev => {
+    draggable.style.opacity = 0.5
+  })
+
+  draggable.addEventListener('dragend', ev => {
+    console.log('stopped dragging')
+    draggable.style.opacity = 1
+  })
+
+  endPoint.addEventListener('dragover', ev => {
+    ev.preventDefault()
+    endPoint.style.backgroundColor = 'lightcoral'
+  })
+  endPoint.addEventListener('dragleave', ev => {
+    endPoint.style.backgroundColor = 'white'
+  })
+  endPoint.addEventListener('drop', ev => {
+    endPoint.textContent = 'You did it!'
+    endPoint.style.backgroundColor = 'red'
+    draggable.parentNode.removeChild(draggable)
+  })
+</script>
