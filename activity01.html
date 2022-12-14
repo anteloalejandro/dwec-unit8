@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      #stalker {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 1rem;
+        width: 200px;
+        background-color: yellow;
+        translate: -50% -50%;
+        cursor: none
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis aspernatur ab hic architecto provident neque recusandae pariatur repudiandae, dolor sunt perferendis quod incidunt optio eum. Enim magnam earum adipisci animi?</p>
+      <p>Deserunt aut dolores consequuntur excepturi quaerat, quo sint illo officiis porro, error eaque, adipisci eum assumenda quia. A, ratione inventore. Quaerat, eveniet sequi rerum itaque quos fugiat ut porro reiciendis.</p>
+      <p>Reprehenderit obcaecati aliquam esse corporis magnam tempore veniam error repellat, maxime omnis consequatur nostrum minima, quo dolore quae voluptate sit nulla nihil mollitia incidunt voluptas culpa qui quos? Aliquam, voluptates.</p>
+      <p>Atque minima cupiditate modi distinctio animi quibusdam minus fugiat alias repudiandae velit? Error vero velit tempora ab aut aliquam officiis quisquam perferendis doloremque. Quibusdam deleniti dicta iste amet laborum ullam.</p>
+      <p>Laudantium rem excepturi vitae, voluptate similique facere a tempora at nesciunt iure voluptatibus quisquam illo debitis nulla! Ex tenetur quae ullam molestiae? Unde, adipisci! Officia quisquam laudantium qui odit voluptatem.</p>
+      <p>Doloribus ex nobis alias est odit sed, molestiae voluptates debitis ut eum ab, repellat dignissimos impedit quos assumenda explicabo? Quidem, ducimus adipisci id dolor ipsa officia maiores ratione quibusdam ullam.</p>
+      <p>Sint qui doloremque eos nisi molestiae. Excepturi quis labore ratione ut. Inventore eius, placeat labore soluta atque dolore, dolorem perferendis eos porro quo velit fugit non rerum explicabo ipsum voluptas.</p>
+      <p>Quidem dolor architecto, expedita animi quam rerum distinctio ipsum suscipit asperiores molestiae sequi vel natus unde quo at praesentium repellat facere consectetur nihil, harum velit voluptatibus hic? Porro, ipsum aliquam.</p>
+      <p>Ut hic corrupti ducimus esse laborum, fugit officiis soluta ullam iste nesciunt ad beatae expedita aliquid quas blanditiis? Sunt soluta consequatur molestiae incidunt rem temporibus exercitationem voluptatibus sed dolore minima!</p>
+      <p>Repudiandae voluptatum corporis omnis maxime itaque alias officiis quisquam rem voluptatem exercitationem! Quibusdam, excepturi exercitationem, voluptatem in quidem recusandae ab sequi iusto adipisci facilis, officia quam error ex magnam amet?</p>
+    </div>
+    <div id="stalker">I will follow you, always. You can't escape.</div>
+  </body>
+</html>
+
+<script>
+  document.addEventListener('mousemove', (ev) => {
+    const stalker = document.getElementById('stalker')
+    stalker.style.top = ev.clientY+'px'
+    stalker.style.left = ev.clientX+'px'
+  })
+</script>
