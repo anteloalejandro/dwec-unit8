@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      background-color: #555;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      width: 50vw;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      margin: auto
+    }
+    body>* {
+      background-color: white;
+      border: 1px solid black;
+      overflow-y: auto;
+    }
+    body>:first-child {
+      height: 50vh;
+    }
+
+    body button:hover {
+      background-color: black;
+      color: white
+    }
+    p {
+      margin-inline: 1ch;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum magnam ipsum quia voluptate sequi obcaecati alias laudantium aspernatur velit deserunt nesciunt doloremque, sed reprehenderit consectetur esse perspiciatis similique fugiat itaque.</p>
+    <p>Nemo iusto blanditiis numquam iure recusandae! Fugiat est aut ullam quod fuga vel, reiciendis recusandae! Officia accusantium fuga cupiditate animi perferendis tenetur aut ut ex mollitia voluptas. Dolorum, sed possimus?</p>
+    <p>Vero ex nihil omnis itaque tempore doloremque, magni eligendi nostrum pariatur libero illo amet impedit? Maxime aliquid voluptatibus, minus eveniet voluptas molestias officia eius cum necessitatibus. Possimus provident doloribus doloremque.</p>
+    <p>Dolor eius aliquid voluptatibus corporis, facere minima nihil reprehenderit id in illo aut totam fugiat enim cum quaerat maiores omnis numquam eos quia a quasi. Voluptatem distinctio magnam perspiciatis ipsum!</p>
+    <p>Expedita veniam deserunt nemo ex, dolores reprehenderit quos? Eaque optio itaque aliquid delectus laborum quos sed impedit, alias, deleniti quod repellat earum veniam dolor dolore sapiente maiores eius temporibus blanditiis?</p>
+    <p>Laudantium harum magni cupiditate illo sequi enim architecto impedit amet voluptates, nisi repellat expedita, iste modi? Dolorum excepturi distinctio officia cum? Illum, nostrum atque ducimus itaque beatae adipisci necessitatibus quod.</p>
+    <p>Labore soluta alias quia quasi vitae vero maiores deserunt pariatur quibusdam praesentium doloremque, dolore atque omnis placeat esse expedita id consequuntur ducimus natus illum laudantium aperiam nesciunt, enim quam! Sunt!</p>
+    <p>Esse velit saepe vel harum numquam accusamus doloribus! Magnam, obcaecati? Illo necessitatibus minima fugit minus nesciunt eos omnis voluptatum odio. Dolor accusamus sapiente labore architecto quibusdam aliquam obcaecati illum ea.</p>
+    <p>Omnis delectus earum asperiores amet inventore, pariatur in reiciendis incidunt quam, nobis praesentium perspiciatis enim non laboriosam quos modi, doloribus laudantium! Illo natus quisquam quam rem incidunt earum ad porro!</p>
+    <p>Molestiae iure facere ex eveniet possimus nulla atque inventore ratione autem mollitia veniam, nam itaque doloremque veritatis, esse quae optio! Inventore totam itaque nesciunt. Ratione omnis tenetur necessitatibus unde distinctio!</p>
+    <p>Quos distinctio, sint repudiandae dicta, fugit aperiam, dolore minima eveniet obcaecati veritatis cupiditate consectetur dolorem ad. Necessitatibus earum nemo eum dolor nam ab. Dolores repellat quaerat dolor minus quo esse?</p>
+    <p>Ea reiciendis accusantium veritatis quasi pariatur asperiores similique rerum sint commodi, cum nobis voluptatem expedita perspiciatis alias maiores porro, nesciunt ut qui aliquid sit laboriosam minus vitae voluptas? Quo, velit?</p>
+    <p>Repellat excepturi quas fugiat beatae. Earum minus quod delectus vel ratione? Cumque debitis similique tempore omnis earum sapiente illum recusandae atque hic aliquam, accusamus harum nobis nostrum libero fugit quo.</p>
+    <p>Distinctio velit nemo et veritatis, voluptatibus saepe deserunt quam quisquam neque odit sed libero sequi dolorum? Dolorem est obcaecati voluptatum eaque, totam suscipit consequuntur magni praesentium libero beatae provident consectetur!</p>
+    <p>Veritatis rerum ad suscipit et tempora omnis unde. Dicta dolores asperiores, quasi nesciunt quae at quia ullam distinctio error accusantium reiciendis saepe tempora id cumque et eaque rem deserunt? Unde?</p>
+    <p>Ipsam, nesciunt fugiat? Cumque libero praesentium dignissimos ratione iusto delectus doloremque, neque amet. Voluptatibus explicabo ea recusandae, quasi perferendis minus consequuntur dolores suscipit molestiae quibusdam, error quaerat, a ad reiciendis!</p>
+    <p>Quo optio reiciendis blanditiis rem ullam et eligendi quibusdam, exercitationem perferendis ea explicabo voluptatem commodi eos quasi aliquam laudantium eum odit, tempore eius. Vel sint et voluptate enim debitis saepe?</p>
+    <p>A repudiandae est consectetur tempora illo, quis, itaque, vero aliquid ullam nulla nemo alias quaerat temporibus unde ea voluptas dolores explicabo! Delectus cupiditate nihil, optio quibusdam aperiam totam enim ex!</p>
+    <p>Quod fugit eius recusandae sit temporibus dicta minus quam tempora deserunt, corporis numquam nam cum dolor consequuntur, reiciendis qui velit iusto molestias a illum, assumenda illo? Neque mollitia sapiente autem.</p>
+    <p>Explicabo nesciunt tenetur odio id libero fuga, temporibus numquam quod impedit. Voluptates error iure reprehenderit deserunt optio sed nemo omnis consequuntur et quia laborum, accusantium beatae nulla quae, sit incidunt?</p>
+  </div>
+  <button>
+    CLOSE
+  </button>
+</body>
+</html>
+
+<script>
+  const elto = document.querySelector('body>:first-child')
+  const btn = document.querySelector('button')
+  const btnParent = btn.parentNode
+  btn.parentNode.removeChild(btn)
+  console.log(btn)
+  elto.addEventListener('scroll', ev => {
+    if (elto.scrollHeight-elto.clientHeight == elto.scrollTop)
+      btnParent.appendChild(btn)
+    else if (btnParent.contains(btn))
+      btnParent.removeChild(btn)
+  })
+  btn.addEventListener('click', ev => {
+    elto.parentNode.removeChild(elto)
+    btnParent.removeChild(btn)
+  })
+</script>
