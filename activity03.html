@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      :root {
+        background-color: #555;
+      }
+      body>:first-child {
+        height: 50vh;
+        width: 50vw;
+        background-color: white;
+        border: 1px solid black;
+        translate: -50% -50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+
+    </div>
+  </body>
+</html>
+
+<script>
+  var prevColor = null
+  const elto = document.querySelector('body>:first-child')
+  elto.addEventListener('mouseenter', (ev) => {
+    prevColor = elto.style.backgroundColor
+    elto.style.backgroundColor = 'green'
+  })
+
+  elto.addEventListener('contextmenu', (ev) => {
+    ev.preventDefault()
+  })
+
+  elto.addEventListener('mousedown', (ev) => {
+    let color = 'transparent'
+    switch (ev.button) {
+      case 0: // Primary Button
+        color = 'red'
+        break;
+      case 2: // Secondary Button
+        color = 'blue'
+      default:
+        break;
+    }
+    prevColor = elto.style.backgroundColor
+    elto.style.backgroundColor = color
+  })
+  elto.addEventListener('mouseup', (ev) => {
+    elto.style.backgroundColor = prevColor
+  })
+</script>
